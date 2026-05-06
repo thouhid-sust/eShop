@@ -1,5 +1,4 @@
-﻿using Catalog.API.Products.GetProductsByCategory;
-
+﻿
 namespace Catalog.API.Products.UpdateProduct
 {
     public record UpdateProductRequest(Guid Id, string Name, List<string> Category, string Description, string ImageFile, double Price);
@@ -21,7 +20,7 @@ namespace Catalog.API.Products.UpdateProduct
                 return Results.Ok(response);
             })
             .WithName("UpdateProduct")
-            .Produces<GetProductsByCategoryResponse>(StatusCodes.Status200OK)
+            .Produces<UpdateProductResponse>(StatusCodes.Status200OK)
             .ProducesProblem(StatusCodes.Status400BadRequest)
             .WithSummary("Update Product")
             .WithDescription("Update Product");

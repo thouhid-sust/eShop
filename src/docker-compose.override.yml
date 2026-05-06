@@ -5,7 +5,7 @@ services:
       context: ./Services/Catalog/Catalog.API
       dockerfile: Dockerfile
     ports:
-      - "5050:8080"   # map host 5050 -> container port exposed by the Dockerfile
+      - "5050:8080"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
 

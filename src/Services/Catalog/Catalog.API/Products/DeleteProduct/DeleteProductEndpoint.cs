@@ -1,5 +1,4 @@
-﻿using Catalog.API.Products.GetProductsByCategory;
-
+﻿
 namespace Catalog.API.Products.DeleteProduct
 {
     public record DeleteProductResponse(bool Success);
@@ -19,7 +18,7 @@ namespace Catalog.API.Products.DeleteProduct
                 return Results.Ok(response);
             })
             .WithName("DeleteProduct")
-            .Produces<GetProductsByCategoryResponse>(StatusCodes.Status200OK)
+            .Produces<DeleteProductResponse>(StatusCodes.Status200OK)
             .ProducesProblem(StatusCodes.Status400BadRequest)
             .WithSummary("Delete Product")
             .WithDescription("Delete Product");
